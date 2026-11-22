@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0f4c5c">
-<title>مسار التخرج — مستشار التوجيه وتقييم الجاهزية | Graduation Pathway</title>
+<title>بوصلة التخرج — مستشار ذكي لتوجيه مشاريع التخرج وتقييم جاهزيتها | GRADUATION PATHWAY</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f4c5c'/%3E%3Cpath d='M32 12 L40 32 L32 28 L24 32 Z' fill='%23e36414'/%3E%3Cpath d='M32 52 L40 32 L32 36 L24 32 Z' fill='%23ffffff'/%3E%3Ccircle cx='32' cy='32' r='4' fill='%23ffffff'/%3E%3C/svg%3E">
 <style>
 :root{
@@ -370,9 +370,9 @@ const UI={
     presetLoaded:'تم تحميل نموذج حالة جاهز للمعاينة ✨',
     resetDone:'تمت إعادة الضبط إلى الوضع الافتراضي',
 
-    hdrTitle:'مسار التخرج — مستشار التوجيه وتقييم الجاهزية',
-    hdrSub:'GRADUATION PATHWAY & READINESS ADVISOR',
-    hdrTag:'منصة تفاعلية متكاملة لطلاب العمارة والتخطيط: توجيه المسار، قياس جاهزية المشروع، وتشخيص الموقع الحضري',
+    hdrTitle:'بوصلة التخرج',
+    hdrSub:'GRADUATION PATHWAY',
+    hdrTag:'مستشار ذكي لتوجيه مشاريع التخرج وتقييم جاهزيتها في العمارة والتخطيط العمراني',
     tabAdvisor:'🧭 1. مستشار توجيه المسار',
     tabReadiness:'📋 2. مقيّم جاهزية المشروع',
     tabUrban:'🏙️ 3. تشخيص الحي / الموقع',
@@ -411,7 +411,7 @@ const UI={
     ftrName:'د. اعتزاز عبدالرحمن محمداني',
     ftrRole:'أستاذ مساعد في العمارة والتخطيط العمراني | عميد الشؤون العلمية – كلية الاتحاد الدولية الجامعية، السودان',
     ftrTagline:'القيادة الأكاديمية | العمارة | التخطيط العمراني | الذكاء الاصطناعي والابتكار الرقمي',
-    ftrNote:'النسخة 1.1 — مسار التخرج: أداة رقمية تفاعلية لطلاب العمارة وتخطيط المدن',
+    ftrNote:'النسخة 1.1 — بوصلة التخرج: مستشار ذكي لتوجيه مشاريع التخرج وتقييم جاهزيتها في العمارة والتخطيط العمراني',
     bands:['حرج —','متوسط —','قوي —'],
     pillsR:['مكتمل (8–10): ','قيد العمل (4–7): ','متأخر (1–3): '],
     pillsU:['كفاءة عالية (8–10): ','متوسطة (4–7): ','فجوة حرجة (1–3): '],
@@ -435,9 +435,9 @@ const UI={
     presetLoaded:'Sample architectural & urban case loaded ✨',
     resetDone:'Reset to default values',
 
-    hdrTitle:'Graduation Pathway — Advisor & Readiness Evaluator',
-    hdrSub:'ARCHITECTURE & URBAN PLANNING GRADUATION TOOLKIT',
-    hdrTag:'Interactive platform for Architecture & Urban Planning students: Track Advisor, Project Readiness, and Site Diagnosis',
+    hdrTitle:'GRADUATION PATHWAY',
+    hdrSub:'بوصلة التخرج',
+    hdrTag:'An Academic & Design Advisory Tool for Architecture and Urban Planning Students',
     tabAdvisor:'🧭 1. Track Advisor',
     tabReadiness:'📋 2. Project Readiness',
     tabUrban:'🏙️ 3. Neighborhood / Site Diagnosis',
@@ -476,7 +476,7 @@ const UI={
     ftrName:'Eatezaz A. Mohammedani, PhD',
     ftrRole:'Assistant Professor of Architecture & Urban Planning | Dean of Scientific Affairs, Al-Ittihad International University College, Sudan',
     ftrTagline:'Academic Leadership | Architecture | Urban Planning | AI & Digital Innovation',
-    ftrNote:'Version 1.1 — Graduation Pathway: Interactive digital toolkit for Architecture & Urban Planning students',
+    ftrNote:'Version 1.1 — GRADUATION PATHWAY: An Academic & Design Advisory Tool for Architecture and Urban Planning Students',
     bands:['Critical —','Moderate —','Strong —'],
     pillsR:['Ready (8–10): ','In Progress (4–7): ','Delayed (1–3): '],
     pillsU:['High (8–10): ','Moderate (4–7): ','Critical Gap (1–3): '],
@@ -1031,14 +1031,14 @@ function getActiveSummary(){
 
   if(appState.tab==='advisor'){
     const cards=[...$('advisorResults').querySelectorAll('.track-card h3 span:first-child')].map(el=>el.textContent);
-    return [isAr?'مسار التخرج (النسخة 1.1) — توصيات توجيه المسار':'Graduation Pathway (v1.1) — Track Recommendations',...header,'',isAr?'المسارات المقترحة:':'Recommended Tracks:',...cards].join('\n');
+    return [isAr?'بوصلة التخرج (النسخة 1.1) — توصيات توجيه المسار':'Graduation Pathway (v1.1) — Track Recommendations',...header,'',isAr?'المسارات المقترحة:':'Recommended Tracks:',...cards].join('\n');
   }
   if(appState.tab==='readiness'){
-    const lines=[isAr?'مسار التخرج (النسخة 1.1) — تقييم جاهزية مشروع التخرج':'Graduation Pathway (v1.1) — Project Readiness Evaluation',...header,(isAr?'الإجمالي: ':'Total: ')+$('rTotal').textContent+'/100 — '+$('rVerdict').textContent,''];
+    const lines=[isAr?'بوصلة التخرج (النسخة 1.1) — تقييم جاهزية مشروع التخرج':'Graduation Pathway (v1.1) — Project Readiness Evaluation',...header,(isAr?'الإجمالي: ':'Total: ')+$('rTotal').textContent+'/100 — '+$('rVerdict').textContent,''];
     READINESS_CRIT.forEach(c=>lines.push('• '+c[lang].title+': '+appState.readiness[c.id]+'/10'));
     return lines.join('\n');
   }
-  const lines=[isAr?'مسار التخرج (النسخة 1.1) — تشخيص الموقع / الحي الحضري':'Graduation Pathway (v1.1) — Site / Neighborhood Diagnosis',...header,(isAr?'الإجمالي: ':'Total: ')+$('uTotal').textContent+'/100 — '+$('uVerdict').textContent,''];
+  const lines=[isAr?'بوصلة التخرج (النسخة 1.1) — تشخيص الموقع / الحي الحضري':'Graduation Pathway (v1.1) — Site / Neighborhood Diagnosis',...header,(isAr?'الإجمالي: ':'Total: ')+$('uTotal').textContent+'/100 — '+$('uVerdict').textContent,''];
   URBAN_CRIT.forEach(c=>lines.push('• '+c[lang].title+': '+appState.urban[c.id]+'/10'));
   return lines.join('\n');
 }
@@ -1046,9 +1046,9 @@ function getActiveSummary(){
 function updateConsult(){
   const txt=getActiveSummary(), isAr=appState.lang==='ar';
   const intro=isAr
-    ? 'السلام عليكم د. اعتزاز 🌷\nأشاركك نتيجتي من أداة «مسار التخرج»:\n\n'
+    ? 'السلام عليكم د. اعتزاز 🌷\nأشاركك نتيجتي من أداة «بوصلة التخرج»:\n\n'
     : 'Hello Dr. Eatezaz,\nI am sharing my evaluation result from the Graduation Pathway toolkit:\n\n';
-  const subj=(isAr?'استشارة مسار التخرج':'Graduation Pathway Consultation')+(appState.title?' — '+appState.title:'');
+  const subj=(isAr?'استشارة بوصلة التخرج':'Graduation Pathway Consultation')+(appState.title?' — '+appState.title:'');
   $('waBtn').href='https://wa.me/971569758180?text='+encodeURIComponent(intro+txt);
   $('mailBtn').href='mailto:emohammedani@gmail.com?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(txt);
 }
@@ -1057,7 +1057,7 @@ $('sendSugMailBtn').addEventListener('click',e=>{
   const isAr=appState.lang==='ar', L=UI[appState.lang];
   const sug=appState.suggestion.trim();
   if(!sug){e.preventDefault(); toast(L.sugEmpty); return;}
-  const subj=(isAr?'مقترح تطوير — أداة مسار التخرج (النسخة 1.1)':'Suggestion — Graduation Pathway Toolkit (v1.1)');
+  const subj=(isAr?'مقترح تطوير — أداة بوصلة التخرج (النسخة 1.1)':'Suggestion — Graduation Pathway Toolkit (v1.1)');
   const body=[
     (isAr?'النسخة: النسخة 1.1':'Version: Version 1.1'),
     (isAr?'التاريخ: ':'Date: ')+todayStr(),
@@ -1083,7 +1083,7 @@ function downloadHtmlReport(title, bodyHtml, fileSlug){
     ? `<p><b>النسخة:</b> النسخة 1.1 &nbsp;|&nbsp; <b>الطالب / المجموعة:</b> ${esc(appState.student||'غير محدد')} &nbsp;|&nbsp; <b>المشروع / الموقع:</b> ${esc(appState.title||'غير محدد')} &nbsp;|&nbsp; <b>التاريخ:</b> ${todayStr()}</p>`
     : `<p><b>Version:</b> Version 1.1 &nbsp;|&nbsp; <b>Student / Group:</b> ${esc(appState.student||'Not specified')} &nbsp;|&nbsp; <b>Project / Site:</b> ${esc(appState.title||'Not specified')} &nbsp;|&nbsp; <b>Date:</b> ${todayStr()}</p>`;
   const ftr=isAr
-    ? 'النسخة 1.1 — مسار التخرج: د. اعتزاز عبدالرحمن محمداني — أستاذ مساعد في العمارة والتخطيط العمراني | عميد الشؤون العلمية – كلية الاتحاد الدولية الجامعية، السودان'
+    ? 'النسخة 1.1 — بوصلة التخرج: د. اعتزاز عبدالرحمن محمداني — أستاذ مساعد في العمارة والتخطيط العمراني | عميد الشؤون العلمية – كلية الاتحاد الدولية الجامعية، السودان'
     : 'Version 1.1 — Graduation Pathway: Eatezaz A. Mohammedani, PhD — Assistant Professor of Architecture & Urban Planning | Dean of Scientific Affairs, Al-Ittihad International University College, Sudan';
   const doc=`<!DOCTYPE html><html lang="${lang}" dir="${L.dir}"><head><meta charset="UTF-8"><title>${esc(title)}</title>
   <style>
@@ -1174,7 +1174,7 @@ $('copyUrbanBtn').addEventListener('click',()=>copyText(getActiveSummary()));
 $('expAdvisorBtn').addEventListener('click',()=>{
   const isAr=appState.lang==='ar';
   const html=`<div class="box"><h2>${isAr?'المسارات البحثية والتصميمية المقترحة':'Recommended Pathways'}</h2>${$('advisorResults').innerHTML}</div>`;
-  downloadHtmlReport(isAr?'تقرير مستشار توجيه مسار مشروع التخرج':'Graduation Track Advisor Report',html,isAr?'توجيه-مسار-التخرج':'graduation-track-plan');
+  downloadHtmlReport(isAr?'تقرير مستشار توجيه مسار مشروع التخرج':'Graduation Track Advisor Report',html,isAr?'توجيه-بوصلة-التخرج':'graduation-track-plan');
 });
 
 $('expReadinessBtn').addEventListener('click',()=>{
